@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #444;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+input, textarea, button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+div > input[type="number"], 
+div > input[type="text"] {
+  width: 50%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: block;
+}
+
+.MovieCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.MovieCard img {
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.MovieCard h3 {
+  margin: 5px 0;
+  color: #222;
+}
+
+.MovieCard p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.MovieCard strong {
+  color: #000;
+}
+
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  input, textarea, button {
+    width: 100%;
+  }
+
+  .MovieCard {
+    width: 100%;
+    max-width: none;
+  }
+}
