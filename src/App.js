@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import MovieList from "./components/MovieList";
 import Filter from "./components/Filter";
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MovieDetail from "./components/Description";
 
 const App = () => {
   const [movies, setMovies] = useState([
@@ -26,11 +28,16 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Application de Cinéma</h1>
-      <Filter filter={filter} setFilter={setFilter} />
-      <MovieList movies={movies} filter={filter} addMovie={addMovie} />
-    </div>
+    <Router>
+      <div>
+        <h1>Application de Cinéma</h1>
+        <Filter filter={filter} setFilter={setFilter} />
+        <MovieList movies={movies} filter={filter} addMovie={addMovie} />
+        <Routes>
+          <Route path="/movie/:id" element={<MovieDetail movies={movies} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

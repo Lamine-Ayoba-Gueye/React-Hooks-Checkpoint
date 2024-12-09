@@ -32,7 +32,7 @@ const MovieList = ({ movies, filter, addMovie }) => {
         <div>
             <h2>Liste des Films</h2>
             {filteredMovies.map((movie, index) => (
-                <MovieCard key={index} movie={movie} />
+                <MovieCard key={index} movie={movie} index={index} />
             ))}
 
             <h2>Ajouter un Nouveau Film</h2>
